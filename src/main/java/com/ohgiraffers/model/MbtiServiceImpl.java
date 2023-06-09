@@ -3,13 +3,13 @@ package com.ohgiraffers.model;
 import com.ohgiraffers.dto.UserDto;
 
 public class MbtiServiceImpl implements MbtiService {
-    private static MbtiServiceImpl mbtiService = new MbtiServiceImpl();
+    private static final MbtiServiceImpl mbtiService = new MbtiServiceImpl();
 
     private MbtiServiceImpl() {
     }
 
-    public static void getMbtiService(MbtiServiceImpl mbtiService) {
-        MbtiServiceImpl.mbtiService = mbtiService;
+    public static MbtiServiceImpl getMbtiService() {
+        return mbtiService;
     }
 
     @Override
