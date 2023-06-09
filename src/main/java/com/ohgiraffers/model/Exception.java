@@ -49,6 +49,7 @@ public class Exception {
             return validateUserId(userId);
         } catch (IllegalArgumentException ie) {
             ie.getStackTrace();
+            System.out.println(ie.getMessage());
             return ie.getMessage();
         }
     }
