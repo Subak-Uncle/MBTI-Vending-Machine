@@ -20,8 +20,8 @@ public class MbtiServiceImpl implements MbtiService {
         User user = User.getUser();
         String id = User.getUser().checkId(userId);
         String pw = User.getUser().checkPw(userPw);
-        user.setUserId("admin1");
-        user.setUserPw("admin1");
+        user.setUserId(userId);
+        user.setUserPw(userPw);
 
         System.out.println("id = " + id);
         System.out.println("pw = " + pw);
