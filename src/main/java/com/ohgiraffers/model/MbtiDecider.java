@@ -1,58 +1,63 @@
 package com.ohgiraffers.model;
 
 public class MbtiDecider {
-
-
-
-    public String userMBTI;
-
     private static int iedecider = 0;
     private static int nsdecider = 0;
     private static int tfdecider = 0;
     private static int jpdecider = 0;
+    public String userMBTI;
+    private final MbtiDecider mbtiDecider;
+
+    public MbtiDecider(MbtiDecider mbtiDecider) {
+        this.mbtiDecider = mbtiDecider;
+    }
 
 
-
-    public void IEDecider(String select) {
+    //    public void IEDecider(String select) {
     public void Decider(String select) {
 
         if (select == "I") {
-            this.iedecider++;
-        }}
-    public void NSDecider(String select) {
-        if (select == "N") {
-            this.nsdecider++;
-        }}
-    public void TFDecider(String select) {
-        if (select == "T") {
-            this.tfdecider++;
+            iedecider++;
         }
     }
+
+    public void NSDecider(String select) {
+        if (select == "N") {
+            nsdecider++;
+        }
+    }
+
+    public void TFDecider(String select) {
+        if (select == "T") {
+            tfdecider++;
+        }
+    }
+
     public void JPDecider(String select) {
         if (select == "J") {
-            this.jpdecider++;
+            jpdecider++;
         }
     }
 
     public String MBTIDecider() {
         String userMBTI = "";
         String result;
-        if (this.iedecider >= 2) {
+        if (iedecider >= 2) {
             result = userMBTI + "I";
         } else {
             result = userMBTI + "E";
         }
-        if (this.nsdecider >= 2) {
+        if (nsdecider >= 2) {
             result = userMBTI + "N";
         } else {
             result = userMBTI + "S";
         }
-        if (this.tfdecider >= 2) {
+        if (tfdecider >= 2) {
             result = userMBTI + "T";
         } else {
             result = userMBTI + "F";
         }
-        if (this.jpdecider >= 2) {
+        if (jpdecider >= 2) {
             result = userMBTI + "J";
         } else {
             result = userMBTI + "P";
