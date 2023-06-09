@@ -1,6 +1,5 @@
 package com.ohgiraffers.controller;
 
-import com.ohgiraffers.dto.User;
 import com.ohgiraffers.model.MbtiServiceImpl;
 import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.ServletException;
@@ -23,28 +22,30 @@ public class LoginController extends HttpServlet {
 
         String userId = req.getParameter("userId");
         String userPw = req.getParameter("userPw"); //로그인 입력값 get
-        System.out.println("userId = " + userId);
-        System.out.println("userPw = " + userPw);
+
         session.setAttribute("userId", mbtiService.login(userId, userPw).getUserId());
         session.setAttribute("userPw", mbtiService.login(userId, userPw).getUserPw());
         userId = (String) session.getAttribute("userId");
         userPw = (String) session.getAttribute("userPw");
 
         System.out.println("session.getAttribute(\"userId\") = " + userId);
+        System.out.println("userPw = " + userPw);
 
-        if (!session.getAttribute("userId").equals(userId)) {
-            req.setAttribute("error", userId);
-            rd.forward(req, resp);
-        }
-        if (!session.getAttribute("userPw").equals(userPw)) {
-            req.setAttribute("error", userPw);
-            rd.forward(req, resp);
-        } else {
-            User user = MbtiServiceImpl.getMbtiService().login(userId, userPw); //MbtiServiceImpl->DTO 로 전달
-            req.setAttribute("user", user);
-            System.out.println("user = " + user);
-            rd.forward(req, resp);
-        }
+//        if (!session.getAttribute("userId").equals(userId)) {
+//            req.setAttribute("error", userId);
+//            rd.forward(req, resp);
+//        }
+//        if (!session.getAttribute("userPw").equals(userPw)) {
+//            req.setAttribute("error", userPw);
+//            rd.forward(req, resp);
+//        } else {
+//            User user = MbtiServiceImpl.getMbtiService().login(userId, userPw); //MbtiServiceImpl->DTO 로 전달
+//            req.setAttribute("user", user);
+//            System.out.println("user = " + user);
+//            rd.forward(req, resp);
+//        }
+
+        resp.sendRedirect("/question1");
 
     }
 }
