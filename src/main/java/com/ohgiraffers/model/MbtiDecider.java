@@ -2,57 +2,62 @@ package com.ohgiraffers.model;
 
 public class MbtiDecider {
 
-    private String userMBTI;
-
-    private int iedecider = 0;
-    private int nsdecider = 0;
-    private int tfdecider = 0;
-    private int jpdecider = 0;
 
 
-    private String playerIE;
-    private String playerNS;
-    private String playerTF;
-    private String playerJP;
+    public String userMBTI;
 
+    private static int iedecider = 0;
+    private static int nsdecider = 0;
+    private static int tfdecider = 0;
+    private static int jpdecider = 0;
+
+
+
+    public void IEDecider(String select) {
     public void Decider(String select) {
 
         if (select == "I") {
-            iedecider++;
-        }
+            this.iedecider++;
+        }}
+    public void NSDecider(String select) {
         if (select == "N") {
-            nsdecider++;
-        }
+            this.nsdecider++;
+        }}
+    public void TFDecider(String select) {
         if (select == "T") {
-            tfdecider++;
+            this.tfdecider++;
         }
+    }
+    public void JPDecider(String select) {
         if (select == "J") {
-            jpdecider++;
+            this.jpdecider++;
         }
     }
 
-    public String MBTIDecider(String player) {
-        if (iedecider >= 2) {
-            playerIE = "I";
+    public String MBTIDecider() {
+        String userMBTI = "";
+        String result;
+        if (this.iedecider >= 2) {
+            result = userMBTI + "I";
         } else {
-            playerIE = "E";
+            result = userMBTI + "E";
         }
-        if (nsdecider >= 2) {
-            playerNS = "N";
+        if (this.nsdecider >= 2) {
+            result = userMBTI + "N";
         } else {
-            playerNS = "S";
+            result = userMBTI + "S";
         }
-        if (tfdecider >= 2) {
-            playerTF = "T";
+        if (this.tfdecider >= 2) {
+            result = userMBTI + "T";
         } else {
-            playerTF = "F";
+            result = userMBTI + "F";
         }
-        if (jpdecider >= 2) {
-            playerJP = "J";
+        if (this.jpdecider >= 2) {
+            result = userMBTI + "J";
         } else {
-            playerJP = "P";
+            result = userMBTI + "P";
         }
-        userMBTI = playerIE + playerNS + playerTF + playerJP;
+
         return userMBTI;
     }
 
