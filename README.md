@@ -24,31 +24,31 @@
   - MBTI 결과에 대한 분석
     - MBTI 특징(후순위) 
     - MBTI 조합표
- 
-  
-
-
-- 나누기의 경우 나눌 수 가 0인 경우 IllegalArgumentException이 발생하도록 구현
-- 성공 시 결과 페이지 출력 구현
-- 서버 내부 기능 구현 실패 시 500 에러 발생 구현
-- Servlet 연동 실패 시 404 에러 발생 구현 
-- 모든 입력값에서 예외 발생 시 예외 처리 구현
-  - 400 status code 출력 
-  - 예외 메세지 출력
 
 ## 제약사항
 - MVC 패턴 적용
   - View
     - src/main/webapp/WEB-INF/view 디렉터리 생성
-    - index.jsp에서 user에게 연산자, 피연산자 입력
-    - result.jsp에서 계산 결과 출력
+    - index.jsp에서 MBTI '테스트 시작' 버튼 구현
+    - 시작 버튼 클릭 시 'login.jsp'로 이동 구현
+    - 로그인 완료 후 'question1.jsp'로 이동 및 질문 구현
+    - 모든 질문 완료 시 'result.jsp'로 이동
+    - result.jsp에서 결과 출력
   - Controller
     - com.ohgiraffers.controller 패키지 생성
-    - CalcController.java에서 user에게 입력 받은 연산자, 피연산자 데이터 model에 전달
-    - ResultController.java에서 계산 결과값을 view에 전달
+    - LoginController.java에서 사용자에게 입력 받은 로그인 정보를 Dto에 전달
+    - 각 질문에 따른 답변을 AnswerController.java에서 MbtiModel.java로 전달
+    - ResultController.java에서 결과값을 view에 전달
   - Model
     - com.ohgiraffers.model 패키지 생성
-    - 각 사칙연산(+, -, *, /)에 대해 연산 메소드 기능 구현
+    - 질문의 답변을 MbtiModel.java에서 결과 값을 이분법으로 MBTI 성향을 저장
+  - Dto
+    - com.ohgiraffers.dto 패키지 생성
+    - txt 파일에 로그인 정보, MBTI 결과 쓰기 및 저장
+    - txt 파일 불러오기 및 읽기
+    - 로그인 정보와 txt 파일에 있는 정보와 비교 구현
+- SessionStorage엔 "login"을 키 값으로 저장
+  - value로는 아이디, 이름, Password가 들어갈 것  
 - 메소드 이름은 반드시 명령문 형태로 작성
 - 테스트 메소드 기능 검증하도록 작성
   - 전체 테스트 실행 시 에러 발생하는지 확인
