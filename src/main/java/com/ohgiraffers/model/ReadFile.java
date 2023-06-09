@@ -26,6 +26,8 @@ public class ReadFile {
         while ((str = reader.readLine()) != null) {
             if (db.equals("")) {
                 db = db + str;
+                System.out.println(db);
+                continue;
             }
             db = db + "," + str;
             System.out.println(db);
