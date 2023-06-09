@@ -2,23 +2,25 @@ package com.ohgiraffers.dto;
 
 import com.ohgiraffers.model.Exception;
 
+import java.io.IOException;
+
 public class User {
-    private static User user; //싱글톤 패턴
-    ////////////// 메소드 //////////////
+    private static User user;
     Exception exception = Exception.getException();
     private String userId;
     private String userPw;
 
-    private User() {
+    private User() throws IOException {
     }
 
-    public static User getUser() {
+    public static User getUser() throws IOException {
         if (user == null) {
             user = new User();
         }
         return user;
     }
 
+    ////////////// 메소드 //////////////
     public String getUserId() {
         return userId;
     }
@@ -37,17 +39,11 @@ public class User {
 
     // 아이디 검증
     public String checkId(String userId) {
-        if (exception.solveIdException(userId).equals("")) {
-            return userId;
-        }
-        return "error";
+        return exception.solveIdException(userId);
     }
 
     // 비밀번호 검증
     public String checkPw(String userPw) {
-        if (exception.solvePwException(userPw).equals("")) {
-            return userPw;
-        }
-        return "error";
+        return exception.solvePwException(userPw);
     }
 }

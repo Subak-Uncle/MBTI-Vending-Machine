@@ -1,12 +1,24 @@
 package com.ohgiraffers.model;
 
-public class Exception {
-    private static Exception exception = new Exception();
+import java.io.IOException;
 
-    private Exception() {
+public class Exception {
+    private static Exception exception;
+
+    static {
+        try {
+            exception = new Exception();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
     }
 
-    public static Exception getException() {
+    String[] userArr = ReadFile.getReadfile().readUserDB().split(",");
+
+    private Exception() throws IOException {
+    }
+
+    public static Exception getException() throws IOException {
         if (exception == null) {
             exception = new Exception();
         }
@@ -14,22 +26,27 @@ public class Exception {
     }
 
     ////////////// 메소드 //////////////
-    public void validateUserId(String userId) {
-        if (userId.equals("")) {
-            throw new IllegalArgumentException("");
+    public String validateUserId(String userId) {
+        for (String dbId : userArr) {
+            if (userId.equals(dbId.split("/")[0])) {
+                return userId;
+            }
         }
+        throw new IllegalArgumentException("아이디 에러");
     }
 
-    public void validateUserPw(String userPw) {
-        if (userPw.equals("")) {
-            throw new IllegalArgumentException("");
+    public String validateUserPw(String userPw) {
+        for (String dbPw : userArr) {
+            if (userPw.equals(dbPw.split("/")[1])) {
+                return userPw;
+            }
         }
+        throw new IllegalArgumentException("비밀번호 에러");
     }
 
     public String solveIdException(String userId) {
         try {
-            validateUserId(userId);
-            return userId;
+            return validateUserId(userId);
         } catch (IllegalArgumentException ie) {
             ie.getStackTrace();
             return ie.getMessage();
@@ -38,8 +55,7 @@ public class Exception {
 
     public String solvePwException(String userPw) {
         try {
-            validateUserPw(userPw);
-            return userPw;
+            return validateUserPw(userPw);
         } catch (IllegalArgumentException ie) {
             ie.getStackTrace();
             return ie.getMessage();

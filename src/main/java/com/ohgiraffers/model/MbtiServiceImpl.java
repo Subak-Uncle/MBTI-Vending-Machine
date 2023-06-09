@@ -2,6 +2,8 @@ package com.ohgiraffers.model;
 
 import com.ohgiraffers.dto.User;
 
+import java.io.IOException;
+
 public class MbtiServiceImpl implements MbtiService {
     private static final MbtiServiceImpl mbtiService = new MbtiServiceImpl();
 
@@ -14,7 +16,7 @@ public class MbtiServiceImpl implements MbtiService {
 
     ////////////// 메소드 //////////////
     @Override
-    public User login(String userId, String userPw) {
+    public User login(String userId, String userPw) throws IOException {
         User user = User.getUser();
         String id = User.getUser().checkId(userId);
         String pw = User.getUser().checkPw(userPw);

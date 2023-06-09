@@ -6,19 +6,21 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
+import java.io.IOException;
+
 public class LoginTests {
     private MbtiServiceImpl mbtiService;
     private Exception exception;
 
     @BeforeEach
-    public void setUp() {
+    public void setUp() throws IOException {
         this.mbtiService = MbtiServiceImpl.getMbtiService();
         this.exception = Exception.getException();
     }
 
     @DisplayName("DB에 있는 아이디, 비밀번호 입력 시 정상 작동 테스트")
     @Test
-    public void testValidationUser() {
+    public void testValidationUser() throws IOException {
         String userId = "admin1";
         String userPw = "admin1";
 
