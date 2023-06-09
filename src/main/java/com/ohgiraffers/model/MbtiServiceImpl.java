@@ -13,8 +13,9 @@ public class MbtiServiceImpl implements MbtiService {
     }
 
     @Override
-    public void login(String userId, String userPw) {
+    public int login(String userId, String userPw) {
         UserDto.getUserDto().checkId(userId);
         UserDto.getUserDto().checkPw(userPw);
+        return 0;
     }
 }
