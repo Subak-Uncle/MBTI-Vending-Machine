@@ -1,14 +1,17 @@
 # MBTI 자판기
 
 ## 프로젝트 소개
-- 16개의 질문으로 사용자의 MBTI 성향 파악.
+- 12개의 질문으로 사용자의 MBTI 성향 파악.
 - 16 종류의 결과값 도출.
 
 ## 요구사항
 - "주의집중", "정보 수집", "결정 내리기", "생활 양식" 네 분야의 답변 수집
-  - 2지 선다형 질문으로 사용자의 성향 파악.
-  - 
-- 네 분야 별 MBTI를 조합하여 한 문자열로 결과 출력.
+  - 각 분야마다 3가지 2지 선다형 질문으로 사용자의 성향 파악
+- 네 분야 별 MBTI를 조합하여 한 문자열로 결과 출력
+- 로그인 정보와 MBTI 결과를 TXT에 저장
+  - txt 파일 제작 및 불러오기 기능 구현
+  - UserDto, MbtiDto를 통해 DB(txt파일)에 데이터 저장 및 조회
+  
 
 
 - 나누기의 경우 나눌 수 가 0인 경우 IllegalArgumentException이 발생하도록 구현
@@ -41,6 +44,11 @@
 - 모든 개인 작업이 끝난 후 PR 생성
 - PR에 모든 팀원이 코드 리뷰할 것
 - 마지막 리뷰어는 Merge 수행
+
+## Code Contributors
+
+This project exists thanks to all the people who contribute. [[Contribute](CONTRIBUTING.md)].
+<a href="https://github.com/kefranabg/readme-md-generator/graphs/contributors"><img src="https://opencollective.com/readme-md-generator/contributors.svg?width=890&button=false" /></a>
 
 
 ## 패키지 구조
