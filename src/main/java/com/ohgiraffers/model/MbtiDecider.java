@@ -28,27 +28,27 @@ public class MbtiDecider {
     }
 
     public String MBTIDecider() {
-        String userMBTI = "";
-        String result;
+        String userMBTI = null;
+
         if (this.iedecider >= 2) {
-            result = userMBTI + "I";
+            userMBTI += "I";
         } else {
-            result = userMBTI + "E";
+            userMBTI += "E";
         }
         if (this.nsdecider >= 2) {
-            result = userMBTI + "N";
+            userMBTI += "N";
         } else {
-            result = userMBTI + "S";
+            userMBTI += "S";
         }
         if (this.tfdecider >= 2) {
-            result = userMBTI + "T";
+            userMBTI += "T";
         } else {
-            result = userMBTI + "F";
+            userMBTI += "F";
         }
         if (this.jpdecider >= 2) {
-            result = userMBTI + "J";
+            userMBTI += "J";
         } else {
-            result = userMBTI + "P";
+            userMBTI += "P";
         }
 
         return userMBTI;
