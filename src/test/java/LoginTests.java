@@ -1,3 +1,4 @@
+import com.ohgiraffers.dto.User;
 import com.ohgiraffers.model.MbtiServiceImpl;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
@@ -18,8 +19,9 @@ public class LoginTests {
         String userId = "admin1";
         String userPw = "admin1";
 
-        int result = mbtiService.login(userId, userPw);
-        Assertions.assertEquals(0, result);
+        User result = mbtiService.login(userId, userPw);
+        Assertions.assertEquals("admin1", result.getUserId());
+        Assertions.assertEquals("admin1", result.getUserPw());
     }
 
 }
