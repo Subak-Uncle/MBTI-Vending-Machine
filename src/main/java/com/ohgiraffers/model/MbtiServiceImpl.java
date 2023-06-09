@@ -18,13 +18,10 @@ public class MbtiServiceImpl implements MbtiService {
     @Override
     public User login(String userId, String userPw) throws IOException {
         User user = User.getUser();
-        String id = User.getUser().checkId(userId);
-        String pw = User.getUser().checkPw(userPw);
-        user.setUserId(userId);
-        user.setUserPw(userPw);
-
-        System.out.println("id = " + id);
-        System.out.println("pw = " + pw);
+        String id = user.checkId(userId);
+        String pw = user.checkPw(userPw);
+        user.setUserId(id);
+        user.setUserPw(pw);
         System.out.println("user ID = " + user.getUserId());
         System.out.println("user PW = " + user.getUserPw());
         return user;
