@@ -14,6 +14,8 @@ public class MbtiDecider {
 
 
     public void IEDecider(String select) {
+    public void Decider(String select) {
+
         if (select == "I") {
             this.iedecider++;
         }}

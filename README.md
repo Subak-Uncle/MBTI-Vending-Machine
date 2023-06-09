@@ -60,9 +60,7 @@
 - 마지막 리뷰어는 Merge 수행
 
 ## Code Contributors
-
-This project exists thanks to all the people who contribute. [[Contribute](CONTRIBUTING.md)].
-<a href="https://github.com/kefranabg/readme-md-generator/graphs/contributors"><img src="https://opencollective.com/readme-md-generator/contributors.svg?width=890&button=false" /></a>
+[![Alt text](https://avatars.githubusercontent.com/u/88484476?v=4)](https://github.com/Dylan-SonJungin)
 
 
 ## 패키지 구조
