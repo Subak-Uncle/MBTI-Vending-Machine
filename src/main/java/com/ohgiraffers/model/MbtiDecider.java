@@ -16,6 +16,7 @@ public class MbtiDecider {
     private String playerJP;
 
     public void Decider(String select) {
+
         if (select == "I") {
             iedecider++;
         }
