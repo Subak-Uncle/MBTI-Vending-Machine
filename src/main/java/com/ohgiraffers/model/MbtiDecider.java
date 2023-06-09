@@ -4,7 +4,6 @@ public class MbtiDecider {
 
 
 
-    public String userMBTI;
 
     private static int iedecider = 0;
     private static int nsdecider = 0;
@@ -13,22 +12,16 @@ public class MbtiDecider {
 
 
 
-    public void IEDecider(String select) {
     public void Decider(String select) {
-
         if (select == "I") {
             this.iedecider++;
-        }}
-    public void NSDecider(String select) {
+        }
         if (select == "N") {
             this.nsdecider++;
-        }}
-    public void TFDecider(String select) {
+        }
         if (select == "T") {
             this.tfdecider++;
         }
-    }
-    public void JPDecider(String select) {
         if (select == "J") {
             this.jpdecider++;
         }
