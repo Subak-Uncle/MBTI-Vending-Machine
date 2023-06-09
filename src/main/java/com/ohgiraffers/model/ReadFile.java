@@ -17,7 +17,7 @@ public class ReadFile {
 
     public String readUserDB() throws IOException {
         BufferedReader reader = new BufferedReader(
-                new FileReader("C:\\Lecture\\01_java\\local-repo\\finalProject\\src\\main\\java\\com\\ohgiraffers\\db\\userDB.txt"
+                new FileReader("..\\finalProject\\src\\main\\java\\com\\ohgiraffers\\db\\userDB.txt"
                         , StandardCharsets.UTF_8)
         );
         String str;
