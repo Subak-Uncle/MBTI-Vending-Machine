@@ -3,8 +3,6 @@ package com.ohgiraffers.model;
 public class MbtiDecider {
 
 
-
-
     private static int iedecider = 0;
     private static int nsdecider = 0;
     private static int tfdecider = 0;
@@ -53,6 +51,4 @@ public class MbtiDecider {
 
         return userMBTI;
     }
-
-
 }

@@ -1,7 +1,6 @@
 package com.ohgiraffers.controller;
 
 import com.ohgiraffers.dto.User;
-import com.ohgiraffers.model.Exception;
 import com.ohgiraffers.model.MbtiServiceImpl;
 import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.ServletException;
@@ -11,27 +10,23 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
 
-import java.io.BufferedReader;
-import java.io.FileReader;
 import java.io.IOException;
-import java.nio.charset.StandardCharsets;
 
 
 @WebServlet("/login")
 public class LoginController extends HttpServlet {
     @Override
-    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        HttpSession session=req.getSession();
-
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        HttpSession session = req.getSession();
         RequestDispatcher rd = req.getRequestDispatcher("answer");
-
-        Exception exception=Exception.getException();
         MbtiServiceImpl mbtiService = MbtiServiceImpl.getMbtiService();
-        String userId=req.getParameter("userId");
-        String userPw=req.getParameter("userPw"); //로그인 입력값 get
 
-        session.setAttribute("userId", mbtiService.login(userId,userPw).getUserId());
-        session.setAttribute("userPw", mbtiService.login(userId,userPw).getUserPw());
+        String userId = req.getParameter("userId");
+        String userPw = req.getParameter("userPw"); //로그인 입력값 get
+        System.out.println("userId = " + userId);
+        System.out.println("userPw = " + userPw);
+        session.setAttribute("userId", mbtiService.login(userId, userPw).getUserId());
+        session.setAttribute("userPw", mbtiService.login(userId, userPw).getUserPw());
         userId = (String) session.getAttribute("userId");
         userPw = (String) session.getAttribute("userPw");
 
@@ -44,12 +39,11 @@ public class LoginController extends HttpServlet {
         if (!session.getAttribute("userPw").equals(userPw)) {
             req.setAttribute("error", userPw);
             rd.forward(req, resp);
-        }
-        else{
-            User user= MbtiServiceImpl.getMbtiService().login(userId, userPw)  ; //MbtiServiceImpl->DTO 로 전달
+        } else {
+            User user = MbtiServiceImpl.getMbtiService().login(userId, userPw); //MbtiServiceImpl->DTO 로 전달
             req.setAttribute("user", user);
             System.out.println("user = " + user);
-            rd.forward(req,resp);
+            rd.forward(req, resp);
         }
 
     }
