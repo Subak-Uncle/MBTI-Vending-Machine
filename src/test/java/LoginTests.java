@@ -32,8 +32,8 @@ public class LoginTests {
     @DisplayName("DB에 없는 값이 입력되면 예외 발생 테스트")
     @Test
     public void testInputException() {
-        String userId = "admin2";
-        String userPw = "admin2";
+        String userId = "admin3";
+        String userPw = "admin3";
 
         Assertions.assertThrows(
                 IllegalArgumentException.class,
