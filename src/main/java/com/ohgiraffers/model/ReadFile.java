@@ -16,9 +16,8 @@ public class ReadFile {
     }
 
     public String readUserDB() throws IOException {
-        String path = System.getProperty("user.dir") + "\\src\\main\\java\\com\\ohgiraffers\\db\\";
         BufferedReader reader = new BufferedReader(
-                new FileReader(path + "userDB.txt", StandardCharsets.UTF_8));
+                new FileReader("./userDB.txt", StandardCharsets.UTF_8));
         String str;
         String db = "";
 
