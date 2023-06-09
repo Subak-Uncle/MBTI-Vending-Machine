@@ -46,4 +46,14 @@ public class LoginTests {
         );
     }
 
+    @DisplayName("DB에 없는 값이 입력되면 에러 메시지 반환 테스트")
+    @Test
+    public void testInputException2() {
+        String userId = "admin5";
+        String userPw = "admin3";
+
+        Assertions.assertEquals("아이디 에러", exception.solveIdException(userId));
+        Assertions.assertEquals("비밀번호 에러", exception.solvePwException(userPw));
+    }
+
 }

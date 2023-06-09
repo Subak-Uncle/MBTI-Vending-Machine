@@ -19,19 +19,17 @@ public class ReadFile {
         BufferedReader reader = new BufferedReader(
                 new FileReader("./userDB.txt", StandardCharsets.UTF_8));
         String str;
-        String db = "";
+        StringBuilder db = new StringBuilder();
 
         while ((str = reader.readLine()) != null) {
-            if (db.equals("")) {
-                db = db + str;
-                System.out.println(db);
+            if (db.toString().equals("")) {
+                db.append(str);
                 continue;
             }
-            db = db + "," + str;
-            System.out.println(db);
+            db.append(",").append(str);
         }
 
         reader.close();
-        return db;
+        return db.toString();
     }
 }
