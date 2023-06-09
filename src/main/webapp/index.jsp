@@ -5,6 +5,6 @@
     <title>MBTI 테스트</title>
 </head>
 <body>
-    <% response.sendRedirect("/pages/mainHome"); %>
+<% response.sendRedirect("/mainHome"); %>
 </body>
 </html>

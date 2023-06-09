@@ -13,16 +13,16 @@
 </head>
 <body>
 
-    <div style="text-align: center">
-        <h1>MBTI 테스트</h1>
-        <h4>당신의 MBTI가 궁금합니다~~~</h4>
-        <button id="moveLogin" onclick="moveLogin()">테스트 시작하기</button>
-    </div>
+<div style="text-align: center">
+    <h1>MBTI 테스트</h1>
+    <h4>당신의 MBTI가 궁금합니다~~~</h4>
+    <button id="moveLogin" onclick="moveLogin()">테스트 시작하기</button>
+</div>
 
-    <script type="text/javascript">
-        function moveLogin() {
-            location.href="/pages/loginPage";
-        }
-    </script>
+<script type="text/javascript">
+    function moveLogin() {
+        location.href = "/loginPage";
+    }
+</script>
 </body>
 </html>
