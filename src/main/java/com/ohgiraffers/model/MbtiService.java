@@ -1,6 +1,9 @@
 package com.ohgiraffers.model;
 
-public interface MbtiService {
-    int login(String userId, String userPw);
+import com.ohgiraffers.dto.User;
 
+import java.io.IOException;
+
+public interface MbtiService {
+    User login(String userId, String userPw) throws IOException;
 }
