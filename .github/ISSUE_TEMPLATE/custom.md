@@ -1,8 +1,8 @@
 ---
 name: Custom issue template
 about: Describe this issue template's purpose here.
-title: "\U0001F435FEATURE"
-labels: ''
+title: "\U0001F435"
+labels: "✨Feature"
 assignees: ''
 
 ---
