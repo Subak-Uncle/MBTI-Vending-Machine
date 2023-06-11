@@ -33,7 +33,7 @@
                 <td colspan="2" style="text-align: center">
                     <input type="radio" id="answer1" name="answer" value="I" required><label for="answer1">YES</label>
                 </td>
-                <td colspan="2" style="text-align: center">\
+                <td colspan="2" style="text-align: center">
                     <input type="radio" id="answer2" name="answer" value="E" required><label for="answer2">No</label>
                 </td>
             </tr>
