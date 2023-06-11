@@ -9,6 +9,7 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
 import java.io.IOException;
+import java.util.Date;
 
 @WebServlet("/answer")
 public class AnswerController extends HttpServlet {
@@ -17,14 +18,22 @@ public class AnswerController extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
+        System.out.println("AnswerController doGet : " + new Date());
+
         RequestDispatcher rd;
         MbtiDecider mbtiDecider = new MbtiDecider();
         String answer = req.getParameter("answer");
+        System.out.println("Q." + questionIndex + " answer = " + answer);
+
+
+        if (answer.equals(null)) {
+            questionIndex--;
+        }
 
         questionIndex++;
         mbtiDecider.Decider(answer);
 
-        if (questionIndex == 13) {
+        if (questionIndex >= 13) {
             String result = mbtiDecider.MBTIDecider();
             req.setAttribute("result", result);
             rd = req.getRequestDispatcher("/WEB-INF/views/result.jsp");

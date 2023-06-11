@@ -9,17 +9,53 @@
 <html>
 <head>
     <title>MBTI 테스트 : "주의 집중" question</title>
+    <link rel="stylesheet" href="../../css/main.css">
 </head>
 <body>
-    <h1>질문 1</h1>
+<form action="answer" onsubmit="checkForm(event)">
+    <div id="questionBox">
+        <table>
+            <colgroup>
+                <col style="width: 200px">
+                <col style="width: 200px">
+                <col style="width: 200px">
+                <col style="width: 200px">
+            </colgroup>
+            <thead>
+            <tr>
+                <th colspan="4">
+                    <h2>Q1. 단체 활동에 참여하는 일을 즐긴다.</h2>
+                </th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td colspan="2" style="text-align: center">
+                    <input type="radio" id="answer1" name="answer" value="E"><label for="answer1">YES</label>
+                </td>
+                <td colspan="2" style="text-align: center">
+                    <input type="radio" id="answer2" name="answer" value="I"><label for="answer2">No</label>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="4" style="text-align: right">
+                    <button type="submit">Next</button>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</form>
 
-    <label>Q1. </label><h4>단체 활동에 참여하는 일을 즐긴다.</h4>
-    <br>
-    <br>
-    <input type="radio" name="answer" id="answer1" value="E"><label for="answer1">YES</label>
-    &nbsp&nbsp&nbsp&nbsp
-    <input type="radio" name="answer" id="answer2" value="I"><label for="answer2">No</label>
-    <br>
-    <input type="submit" value="NEXT">
+<script type="text/javascript">
+    function checkForm(event) {
+        let selectedOption = document.querySelector('input[name="answer"]:checked')
+        if (selectedOption === null) {
+            event.preventDefault();
+            alert("하나 이상의 선택지를 선택해주세요.");
+            location.reload();
+        }
+    }
+</script>
 </body>
 </html>

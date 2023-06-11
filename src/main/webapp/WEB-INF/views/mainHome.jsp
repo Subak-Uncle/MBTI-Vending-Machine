@@ -13,10 +13,10 @@
 </head>
 <body>
 
-<div style="text-align: center">
+<div style="text-align: center; font-size: 30px">
     <h1>MBTI 테스트</h1>
     <h4>당신의 MBTI가 궁금합니다~~~</h4>
-    <button id="moveLogin" onclick="moveLogin()">테스트 시작하기</button>
+    <button id="moveLogin" onclick="moveLogin()">Start</button>
 </div>
 
 <script type="text/javascript">

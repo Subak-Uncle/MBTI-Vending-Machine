@@ -12,12 +12,9 @@
 <html>
 <head>
     <title>MBTI 테스트 : 결과</title>
+    <link rel="stylesheet" href="../../css/main.css">
 </head>
 <body>
-
-  <div>
-    <h1> 당신의 MBTI는 <%=result%> 입니다.</h1>
-
-  </div>
+      <h1> 당신의 MBTI는 <span style="color: #fee03b; font-size: 50px"><%=result%></span> 입니다.</h1>
 </body>
 </html>

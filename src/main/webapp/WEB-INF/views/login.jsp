@@ -9,6 +9,7 @@
 <html>
 <head>
     <title>MBTI 테스트 : Login</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <link rel="stylesheet" href="../../css/login.css">
 </head>
 <body>
@@ -33,8 +34,8 @@
             <div class="signin">
                 <h1>sign in</h1>
                 <form action="login" class="more-padding" autocomplete="off" method="post">
-                    <input type="text" name="userId" placeholder="username">
-                    <input type="password" name="userPw" placeholder="password">
+                    <input type="text" name="userId" class="hangleFont" placeholder="아이디">
+                    <input type="password" name="userPw" class="hangleFont" placeholder="패스워드">
                     <div class="checkbox">
                         <input type="checkbox" id="remember"/><label for="remember">remember me</label>
                     </div>
@@ -56,8 +57,8 @@
 
         <%-- 설명. 로그인 창에서 오른쪽 박스 --%>
         <div class="rightbox">
-            <h2 class="title"><span>BLOOM</span>&<br>BOUQUET</h2>
-            <p class="desc"> pick your perfect <span>bouquet</span></p>
+            <h2 class="title"><span>MBTI Test</span></h2>
+            <p class="desc"> Journey into <span>Mind's Blueprint</span></p>
             <img class="flower" src="https://preview.ibb.co/jvu2Un/0057c1c1bab51a0.jpg"/>
             <p class="account">don't have an account?</p>
             <button class="button" id="signup">sign up</button>
@@ -83,7 +84,7 @@
 
 
     function moveQuestion() {
-        location.href = "/pages/question";
+        location.href = "/question1";
     }
 </script>
 

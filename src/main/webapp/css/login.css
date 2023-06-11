@@ -1,7 +1,14 @@
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400|Lora");
+@import url('https://fonts.googleapis.com/css2?family=Sunflower:wght@300&display=swap');
+
+:root {
+    --subColor: #EAC7CC;
+}
 
 body {
     background: #CBC0D3;
+    display: flex;
+
 }
 
 /* div box styling */
@@ -26,13 +33,17 @@ body {
     position: absolute;
     top: -10%;
     left: 5%;
-    background: #EAC7CC;
+    background: var(--subColor);
     width: 320px;
     height: 500px;
     border-radius: 5px;
     box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
     transition: all 0.5s ease-in-out;
     z-index: 2;
+}
+
+.hangleFont {
+    font-family: 'Sunflower', sans-serif;
 }
 
 .nodisplay {
@@ -167,17 +178,15 @@ form {
 }
 
 input {
-    background: #EAC7CC;
+    background: #f6f6f6;
     width: 65%;
     color: #ce7d88;
     border: none;
     border-bottom: 1px solid rgba(246, 246, 246, 0.5);
-    padding: 9px;
     margin: 7px;
 }
 input::placeholder {
-    color: #f6f6f6;
-    letter-spacing: 2px;
+    color: #EAC7CC;
     font-size: 1.3em;
     font-weight: 100;
 }
@@ -196,7 +205,7 @@ label {
     font-family: "Open Sans", sans-serif;
     color: #ce7d88;
     font-size: 0.8em;
-    letter-spacing: 1px;
+    /*letter-spacing: 1px;*/
 }
 
 .checkbox {
