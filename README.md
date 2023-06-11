@@ -65,10 +65,11 @@
 
 
 ## 패키지 구조
-<img width="314" alt="사진" src="https://github.com/MTVS-Server/servlet-calculator/assets/134986842/ff64372d-d28f-46a9-965f-2d177320f698">
+<img width="266" alt="스크린샷 2023-06-12 084223" src="https://github.com/MTVS-Server/finalProject/assets/88484476/dac4e31e-9591-4b15-810b-e72731c5bca2">
 
 
 ## 순서도
+
 <img width="882" alt="스크린샷 2023-06-11 220045" src="https://github.com/MTVS-Server/finalProject/assets/88484476/3db2e48e-4e52-412d-92de-69a461d745d1">
 
 
