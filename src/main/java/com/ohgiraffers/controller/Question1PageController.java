@@ -8,11 +8,14 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
 import java.io.IOException;
+import java.util.Date;
 
 @WebServlet("/question1")
 public class Question1PageController extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        System.out.println("Question1PageController : " + new Date());
+
         RequestDispatcher rd = req.getRequestDispatcher("/WEB-INF/views/question1.jsp");
         rd.forward(req, resp);
     }

@@ -23,7 +23,6 @@ tr, td {
 button {
     padding: 12px;
     text-transform: uppercase;
-    letter-spacing: 3px;
     font-size: 15px;
     border-radius: 10px;
     margin: auto;

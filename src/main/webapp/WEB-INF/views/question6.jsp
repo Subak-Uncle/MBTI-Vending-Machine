@@ -5,7 +5,7 @@
     <link rel="stylesheet" href="../../css/main.css">
 </head>
 <body>
-<form action="answer" onsubmit="checkForm(event)">
+<form action="answer">
     <div id="questionBox">
         <table>
             <colgroup>
@@ -24,10 +24,10 @@
             <tbody>
             <tr>
                 <td colspan="2" style="text-align: center">
-                    <input type="radio" id="answer1" name="answer" value="N"><label for="answer1">YES</label>
+                    <input type="radio" id="answer1" name="answer" value="N" required><label for="answer1">YES</label>
                 </td>
                 <td colspan="2" style="text-align: center">
-                    <input type="radio" id="answer2" name="answer" value="S"><label for="answer2">No</label>
+                    <input type="radio" id="answer2" name="answer" value="S" required><label for="answer2">No</label>
                 </td>
             </tr>
             <tr>
