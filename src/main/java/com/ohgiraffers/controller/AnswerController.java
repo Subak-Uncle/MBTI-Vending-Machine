@@ -31,8 +31,10 @@ public class AnswerController extends HttpServlet {
         System.out.println(questionIndex);
 
         if(questionIndex==13){
-            rd=req.getRequestDispatcher("/WEB-INF/views/result.jsp");
-            rd.forward(req,resp);
+            String result=mbtiDecider.MBTIDecider();
+            req.setAttribute("result",result);
+            rd= req.getRequestDispatcher("/WEB-INF/views/result.jsp");
+            System.out.println("result = " + result);
         }
         else{
             rd=req.getRequestDispatcher("/WEB-INF/views/question"+questionIndex+".jsp");

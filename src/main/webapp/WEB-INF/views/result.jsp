@@ -1,10 +1,13 @@
-<%--
+<%@ page import="java.nio.file.FileStore" %><%--
   Created by IntelliJ IDEA.
   User: user
   Date: 2023-06-09
   Time: 오후 2:40
   To change this template use File | Settings | File Templates.
 --%>
+<%
+    String result = (String) request.getAttribute("result");
+%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -13,7 +16,7 @@
 <body>
 
   <div>
-    <h1> 당신의 MBTI는 <% request.getAttribute("result")%> 입니다.</h1>
+    <h1> 당신의 MBTI는 <%=result%> 입니다.</h1>
 
   </div>
 </body>

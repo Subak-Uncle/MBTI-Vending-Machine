@@ -49,6 +49,7 @@ public class MbtiDecider {
             userMBTI += "P";
         }
 
-        return userMBTI;
+        return "sdfsdfs";
+        //return userMBTI;
     }
 }

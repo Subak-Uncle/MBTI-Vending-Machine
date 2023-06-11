@@ -11,14 +11,17 @@
     <title>MBTI 테스트 : "주의 집중" question</title>
 </head>
 <body>
-    <h1>질문 1</h1>
 
+    <h1>질문 1</h1>
+    <form action="answer" method="get">
     <label>Q1. </label><h4>단체 활동에 참여하는 일을 즐긴다.</h4>
     <br>
     <br>
-    <input type="radio" id="answer1" value="E"><label for="answer1">YES</label>
+    <input type="radio" name="answer" id="answer1" value="E"><label for="answer1">YES</label>
     &nbsp&nbsp&nbsp&nbsp
-    <input type="radio" id="answer2" value="I"><label for="answer2">No</label>
-
+    <input type="radio" name="answer" id="answer2" value="I"><label for="answer2">No</label>
+    <br>
+    <input type="submit" value="NEXT">
+    </form>
 </body>
 </html>

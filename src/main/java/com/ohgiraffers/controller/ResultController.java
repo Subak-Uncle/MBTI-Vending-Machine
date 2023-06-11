@@ -1,5 +1,7 @@
 package com.ohgiraffers.controller;
 
+import com.ohgiraffers.model.MbtiDecider;
+import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
@@ -13,11 +15,12 @@ public class ResultController extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
-//        MbtiDecider mbtiDecider=new MbtiDecider();
-//        mbtiDecider.MBTIDecider("admin"); //최종 결과값 받아오기
+        MbtiDecider mbtiDecider=new MbtiDecider();
+        String result=mbtiDecider.MBTIDecider();
 
-//        view로 이동 result 출력
-
+        req.setAttribute("result",result);
+        RequestDispatcher rd= req.getRequestDispatcher("/WEB-INF/views/result.jsp");
+        rd.forward(req,resp);
 
     }
 }
