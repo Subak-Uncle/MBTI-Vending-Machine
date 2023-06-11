@@ -38,7 +38,8 @@
                 </td>
             </tr>
             <tr>
-                <td colspan="4" style="text-align: right">
+                <td colspan="4" style="text-align: center">
+                    <input type="hidden" name="prev" value=" ">
                     <button type="submit">Next</button>
                 </td>
             </tr>

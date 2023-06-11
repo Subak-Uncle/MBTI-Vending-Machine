@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="../../css/main.css">
 </head>
 <body>
-<form action="answer">
+<form id="myForm" action="answer">
     <div id="questionBox">
         <table>
             <colgroup>
@@ -31,14 +31,18 @@
             <tbody>
             <tr>
                 <td colspan="2" style="text-align: center">
-                    <input type="radio" id="answer1" name="answer" value="E" required><label for="answer1">YES</label>
+                    <input type="radio" id="answer1" name="answer" value="E" required checked><label for="answer1">YES</label>
                 </td>
                 <td colspan="2" style="text-align: center">
                     <input type="radio" id="answer2" name="answer" value="I" required><label for="answer2">No</label>
                 </td>
             </tr>
             <tr>
-                <td colspan="4" style="text-align: right">
+                <td colspan="2" style="text-align: left; padding-left: 10px">
+                    <input type="hidden" id="prev" name="prev" value="">
+                    <button type="button" onclick="submitPrev()">Prev</button>
+                </td>
+                <td colspan="2" style="text-align: right; padding-right: 10px">
                     <button type="submit">Next</button>
                 </td>
             </tr>
@@ -46,6 +50,12 @@
         </table>
     </div>
 </form>
+<script type="text/javascript">
+    function submitPrev() {
+        document.getElementById("prev").value = "prev";
+        document.getElementById('myForm').submit();
+    }
+</script>
 </body>
 </html>
 
