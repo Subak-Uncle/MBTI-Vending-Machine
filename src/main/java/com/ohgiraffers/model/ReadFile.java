@@ -16,8 +16,13 @@ public class ReadFile {
     }
 
     public String readUserDB() throws IOException {
+//        String filePath = "userDB.txt";
+//        File file = new File(filePath);
+//        String path = file.getAbsolutePath();
+//        System.out.println("path = " + path);
+
         BufferedReader reader = new BufferedReader(
-                new FileReader("C:\\Lecture\\01_java\\local-repo\\finalProject\\userDB.txt", StandardCharsets.UTF_8));
+                new FileReader("C:/userDB.txt", StandardCharsets.UTF_8));
         String str;
         StringBuilder db = new StringBuilder();
 
@@ -27,6 +32,7 @@ public class ReadFile {
                 continue;
             }
             db.append(",").append(str);
+            System.out.println("db = " + db);
         }
 
         reader.close();

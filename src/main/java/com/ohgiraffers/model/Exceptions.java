@@ -2,12 +2,12 @@ package com.ohgiraffers.model;
 
 import java.io.IOException;
 
-public class Exception {
-    private static Exception exception;
+public class Exceptions {
+    private static Exceptions exception;
 
     static {
         try {
-            exception = new Exception();
+            exception = new Exceptions();
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
@@ -15,12 +15,12 @@ public class Exception {
 
     String[] userArr = ReadFile.getReadfile().readUserDB().split(",");
 
-    private Exception() throws IOException {
+    private Exceptions() throws IOException {
     }
 
-    public static Exception getException() throws IOException {
+    public static Exceptions getException() throws IOException {
         if (exception == null) {
-            exception = new Exception();
+            exception = new Exceptions();
         }
         return exception;
     }
