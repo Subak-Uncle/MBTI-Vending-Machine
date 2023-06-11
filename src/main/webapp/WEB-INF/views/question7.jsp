@@ -8,7 +8,7 @@
 <%@ page contentType="text/html;charset=UTF-8"%>
 <html>
 <head>
-    <title>MBTI 테스트 : "주의 집중" question</title>
+    <title>MBTI 테스트 : "결정내리기" question</title>
 </head>
 <body>
 <form action="answer" method="get">
