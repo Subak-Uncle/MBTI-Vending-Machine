@@ -22,12 +22,13 @@ tr, td {
 
 button {
     padding: 12px;
+    background: #f6f6f6;
     text-transform: uppercase;
-    font-size: 15px;
+    font-size: 30px;
     border-radius: 10px;
     margin: auto;
     outline: none;
-    display: block;
+    display: inline;
 }
 
 button:hover {
