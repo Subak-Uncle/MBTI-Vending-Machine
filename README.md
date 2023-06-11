@@ -65,7 +65,7 @@
 
 
 ## 패키지 구조
-<img width="266" alt="스크린샷 2023-06-12 084223" src="https://github.com/MTVS-Server/finalProject/assets/88484476/dac4e31e-9591-4b15-810b-e72731c5bca2">
+<img width="278" alt="스크린샷 2023-06-12 084541" src="https://github.com/MTVS-Server/finalProject/assets/88484476/fd5695f3-81f8-4d02-a492-73d3290ea75b">
 
 
 ## 순서도
