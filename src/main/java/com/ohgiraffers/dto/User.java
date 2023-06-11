@@ -1,12 +1,12 @@
 package com.ohgiraffers.dto;
 
-import com.ohgiraffers.model.Exception;
+import com.ohgiraffers.model.Exceptions;
 
 import java.io.IOException;
 
 public class User {
     private static User user;
-    Exception exception = Exception.getException();
+    Exceptions exception = Exceptions.getException();
     private String userId;
     private String userPw;
 

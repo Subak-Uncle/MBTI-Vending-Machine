@@ -1,5 +1,5 @@
 import com.ohgiraffers.dto.User;
-import com.ohgiraffers.model.Exception;
+import com.ohgiraffers.model.Exceptions;
 import com.ohgiraffers.model.MbtiServiceImpl;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
@@ -10,12 +10,12 @@ import java.io.IOException;
 
 public class LoginTests {
     private MbtiServiceImpl mbtiService;
-    private Exception exception;
+    private Exceptions exception;
 
     @BeforeEach
     public void setUp() throws IOException {
         this.mbtiService = MbtiServiceImpl.getMbtiService();
-        this.exception = Exception.getException();
+        this.exception = Exceptions.getException();
     }
 
     @DisplayName("DB에 있는 아이디, 비밀번호 입력 시 정상 작동 테스트")
