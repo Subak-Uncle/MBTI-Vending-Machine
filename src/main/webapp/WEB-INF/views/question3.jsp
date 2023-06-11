@@ -14,7 +14,7 @@
 <form action="answer" method="get">
     <h1>질문 3</h1>
 
-    <label>Q1. </label><h4>단체 활동에 참여하는 일을 즐긴다.</h4>
+    <label>Q3. </label><h4>혼자만의 시간을 보내기보다는 즐거운 파티와 행사로 일주일의 피로를 푸는 편이다. </h4>
     <br>
     <br>
     <input type="radio" name="answer" id="answer1" value="E" checked><label for="answer1">YES</label>
