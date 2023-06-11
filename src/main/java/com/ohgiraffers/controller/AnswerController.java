@@ -8,6 +8,7 @@ import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
+import java.beans.PropertyEditorSupport;
 import java.io.IOException;
 import java.util.Date;
 
@@ -25,11 +26,6 @@ public class AnswerController extends HttpServlet {
         String answer = req.getParameter("answer");
         System.out.println("Q." + questionIndex + " answer = " + answer);
 
-
-        if (answer.equals(null)) {
-            questionIndex--;
-        }
-
         questionIndex++;
         mbtiDecider.Decider(answer);
 
@@ -39,6 +35,8 @@ public class AnswerController extends HttpServlet {
             rd = req.getRequestDispatcher("/WEB-INF/views/result.jsp");
             System.out.println("result = " + result);
         } else {
+            req.setAttribute("answer", "");
+            answer = "";
             rd = req.getRequestDispatcher("/WEB-INF/views/question" + questionIndex + ".jsp");
         }
 
