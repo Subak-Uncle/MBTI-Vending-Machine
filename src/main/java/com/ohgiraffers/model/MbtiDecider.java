@@ -18,7 +18,7 @@ public class MbtiDecider {
         result[index-1] = select;
         for (int i=0; i<result.length; i++){
             System.out.print(result[i] + " ");
-            if (i == result.length) {
+            if (i == result.length -1) {
                 System.out.println();
             }
         }
