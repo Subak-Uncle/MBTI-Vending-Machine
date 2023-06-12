@@ -56,11 +56,11 @@
 - 마지막 리뷰어는 Merge 수행
 
 ## Code Contributors
-[![Alt text](https://avatars.githubusercontent.com/u/88484476?v=4)](https://github.com/Dylan-SonJungin)
-[![만제](https://avatars.githubusercontent.com/u/98208452?v=4)](https://github.com/fakerdeft)
-[![프로필](https://avatars.githubusercontent.com/u/115992753?v=4)](https://github.com/Subak-Uncle)
-[![hc](https://avatars.githubusercontent.com/u/134986842?v=4)](https://github.com/ahnichan)
-[![지원](https://avatars.githubusercontent.com/u/19159759?v=4)](https://github.com/jiwon11)
+[<img src="https://avatars.githubusercontent.com/u/88484476?v=4" alt="Alt text" style="zoom:25%;" />](https://github.com/Dylan-SonJungin)
+[<img src="https://avatars.githubusercontent.com/u/98208452?v=4" alt="만제" style="zoom: 25%;" />](https://github.com/fakerdeft)
+[<img src="https://avatars.githubusercontent.com/u/115992753?v=4" alt="프로필" style="zoom:25%;" />](https://github.com/Subak-Uncle)
+[<img src="https://avatars.githubusercontent.com/u/134986842?v=4" alt="hc" style="zoom:25%;" />](https://github.com/ahnichan)
+[<img src="https://avatars.githubusercontent.com/u/19159759?v=4" alt="지원" style="zoom:25%;" />](https://github.com/jiwon11)
 
 
 ## 패키지 구조
