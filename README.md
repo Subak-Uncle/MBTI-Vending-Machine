@@ -57,11 +57,10 @@
 
 ## Code Contributors
 [![Alt text](https://avatars.githubusercontent.com/u/88484476?v=4)](https://github.com/Dylan-SonJungin)
-[![만제](https://github.com/MTVS-Server/finalProject/assets/115992753/37d42016-533d-49b8-8ddf-e14da44b73de)](https://github.com/fakerdeft)
-[![정인](https://github.com/MTVS-Server/finalProject/assets/115992753/724963ce-07c5-4455-a79d-ed7880cefa69)](https://github.com/Dylan-SonJungin)
-[![프로필](https://github.com/MTVS-Server/finalProject/assets/115992753/abf6044e-d223-479d-8deb-b7ea9eea8438)](https://github.com/Subak-Uncle)
-[![hc](https://github.com/MTVS-Server/finalProject/assets/115992753/0caef1d9-2f2a-45ea-8e32-7f232f5be6c7)](https://github.com/ahnichan)
-[![지원](https://github.com/MTVS-Server/finalProject/assets/115992753/ea43fb46-297e-4be3-89ac-4060d98029f4)](https://github.com/jiwon11)
+[![만제](https://avatars.githubusercontent.com/u/98208452?v=4)](https://github.com/fakerdeft)
+[![프로필](https://avatars.githubusercontent.com/u/115992753?v=4)](https://github.com/Subak-Uncle)
+[![hc](https://avatars.githubusercontent.com/u/134986842?v=4)](https://github.com/ahnichan)
+[![지원](https://avatars.githubusercontent.com/u/19159759?v=4)](https://github.com/jiwon11)
 
 
 ## 패키지 구조
