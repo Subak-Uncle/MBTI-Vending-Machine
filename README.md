@@ -26,6 +26,7 @@
 - MVC 패턴 적용
   - View
     - src/main/webapp/WEB-INF/view 디렉터리 생성
+    - index.jsp에서 자동으로 mainHome으로 이동
     - mainHome.jsp에서 MBTI '테스트 시작' 버튼 구현
     - 시작 버튼 클릭 시 'login.jsp'로 이동 구현
     - 로그인 완료 후 'question1.jsp'로 이동 및 질문 구현
