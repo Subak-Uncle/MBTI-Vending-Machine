@@ -56,13 +56,12 @@
 - 모든 개인 작업이 끝난 후 PR 생성
 - 마지막 리뷰어는 Merge 수행
 
-## Code Contributors
+<!-- ## Code Contributors
 [<img src="https://avatars.githubusercontent.com/u/88484476?v=4" alt="Alt text" style="zoom:25%;" />](https://github.com/Dylan-SonJungin)
 [<img src="https://avatars.githubusercontent.com/u/98208452?v=4" alt="만제" style="zoom: 25%;" />](https://github.com/fakerdeft)
 [<img src="https://avatars.githubusercontent.com/u/115992753?v=4" alt="프로필" style="zoom:25%;" />](https://github.com/Subak-Uncle)
 [<img src="https://avatars.githubusercontent.com/u/134986842?v=4" alt="hc" style="zoom:25%;" />](https://github.com/ahnichan)
-[<img src="https://avatars.githubusercontent.com/u/19159759?v=4" alt="지원" style="zoom:25%;" />](https://github.com/jiwon11)
-
+[<img src="https://avatars.githubusercontent.com/u/19159759?v=4" alt="지원" style="zoom:25%;" />](https://github.com/jiwon11) -->
 
 ## 패키지 구조
 <img width="278" alt="스크린샷 2023-06-12 084541" src="https://github.com/MTVS-Server/finalProject/assets/88484476/fd5695f3-81f8-4d02-a492-73d3290ea75b">
@@ -71,5 +70,12 @@
 ## 순서도
 
 <img width="882" alt="스크린샷 2023-06-11 220045" src="https://github.com/MTVS-Server/finalProject/assets/88484476/3db2e48e-4e52-412d-92de-69a461d745d1">
+
+## 화면 구성
+<img width="1071" alt="image" src="https://github.com/MTVS-Server/finalProject/assets/115992753/2f8f8eb9-1b50-4e15-a76f-170535bf1bb1">
+<img width="1069" alt="image" src="https://github.com/MTVS-Server/finalProject/assets/115992753/4c06674b-d74d-4f2d-bcc1-01f04f63135a">
+<img width="1070" alt="image" src="https://github.com/MTVS-Server/finalProject/assets/115992753/5f13992f-39f4-4735-a02a-682b5cf4c2ad">
+<img width="1070" alt="image" src="https://github.com/MTVS-Server/finalProject/assets/115992753/ad550478-cd61-4982-a53c-2cf2982766e7">
+
 
 
